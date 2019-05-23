@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/*-----------------
+  Layout
+-----------------*/
+
+// ページ全体の枠
+.st-Layout {
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+// メニューボード
+.st-Layout_Side {
+  flex-shrink: 0;
+}
+
+// 基本の枠
+.st-Layout_Primary {
+  flex: 1 1 0%;
+  min-width: 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+// コンテンツ
+.st-Layout_Content {
+  flex: 1 1 0%;
+  min-width: 0%;
+}
+
+// フッター
+.st-Layout_Footer {
+  flex-shrink: 0;
+}

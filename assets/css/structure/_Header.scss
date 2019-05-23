@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/*-----------------
+  Header
+-----------------*/
+
+.st-Header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: index($z-index, header);
+  display: flex;
+  background-color: $mono-color7;
+  border-bottom: 1px solid $mono-color6;
+}
+
+.st-Header_Back {
+  @include button-reset;
+  flex: 0 0 24px;
+  margin: 10px 4px 10px 16px;
+  padding: 0;
+  > svg {
+    display: block;
+  }
+}
+
+.st-Header_Close {
+  @include button-reset;
+  flex: 0 0 24px;
+  margin: 10px 16px 10px 4px;
+  padding: 0;
+  > svg {
+    display: block;
+  }
+}
+
+.st-Header_Title {
+  flex: 1 1 0%;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  text-align: center;
+  align-self: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

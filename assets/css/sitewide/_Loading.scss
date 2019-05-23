@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/*-----------------
+  Loading
+-----------------*/
+
+.sw-Loading {
+  display: block;
+  padding: 32px 0;
+}
+
+.sw-Loading_Icon {
+  display: block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0px auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+  border-top: 4px solid $mono-color5;
+  border-right: 4px solid $mono-color5;
+  border-bottom: 4px solid $mono-color5;
+  border-left: 4px solid $mono-color4;
+  animation: loadind .8s infinite linear;
+}
+
+@-webkit-keyframes loadind {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadind {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

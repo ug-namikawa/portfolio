@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* Font Family */
+$base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Meiryo", "メイリオ", sans-serif;
+$number-font-family: "Avenir Next", "Lato", sans-serif;
+
+// variables
+$accent-color: #4990e2;
+$premium-color: #d9a300;
+$register-color: #f1b700;
+
+// Monotone Color
+$mono-color0: #000;
+$mono-color1: #252525;
+$mono-color2: #525252;
+$mono-color3: #999;
+$mono-color4: #ccc;
+$mono-color5: #e6e6e6;
+$mono-color6: #f4f4f4;
+$mono-color7: #fff;
+
+// SNS Color
+$twitter-color: #1da1f2;
+$facebook-color: #3c5998;
+$line-color: #00b900;
+$share-color: #82919c;
+
+// 変数
+$backgroundColor: #fff;
+$borderColor: $mono-color5;
+$accentColor: #4990E2;
+$image-radius: 4px;
+
+// Bluetone Color from LeoPlayerViewComponent
+$blue-color1: #091832;
+$blue-color2: #16315f;
+$blue-color3: #27486c;
+$blue-color4: #415e7d;
+$blue-color5: #657586;
+$blue-color6: #8795a3;
+$blue-color7: #b2bac2;
+$blue-color8: #dae1e8;
+
+// z-index
+$z-index:(
+  actionsheet,
+  header,
+  suggest
+);
+
+@function reverse($map) {
+  $result: ();
+  @for $i from 1 through length($map) {
+    $result: join((nth($map, $i)), $result, comma);
+  }
+  @return $result;
+}
+
+$z-index: reverse($z-index);
