@@ -1,7 +1,7 @@
 # nsen design mock
 
 ## URL
-https://ug-namikawa.github.io/portfolio/public/
+https://ug-namikawa.github.io/portfolio/dist/
 
 ## 使用方法
 
