@@ -82,7 +82,7 @@ gulp.task('browser-sync', () => {
     server: {
       baseDir: './dist/'
     },
-    open: 'external',
+    // open: 'external',
   });
 });
 
