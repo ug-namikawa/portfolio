@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// Introduction
+
+.tp-Introduction {
+  margin: 80px 40px;
+  font-family: "M PLUS 1p";
+}
+
+.tp-Introduction_Title {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.tp-Introduction_Description {
+  margin: 12px 0 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+  color: $mono-color3;
+}

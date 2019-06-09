@@ -5,44 +5,39 @@
 -----------------*/
 
 .st-Header {
+  position: relative;
   display: flex;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: index($z-index, header);
-  display: flex;
-  background-color: $mono-color7;
-  border-bottom: 1px solid $mono-color6;
-}
-
-.st-Header_Back {
-  @include button-reset;
-  flex: 0 0 24px;
-  margin: 10px 4px 10px 16px;
+  height: 56px;
   padding: 0;
-  > svg {
-    display: block;
-  }
-}
-
-.st-Header_Close {
-  @include button-reset;
-  flex: 0 0 24px;
-  margin: 10px 16px 10px 4px;
-  padding: 0;
-  > svg {
-    display: block;
-  }
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .st-Header_Title {
-  flex: 1 1 0%;
-  margin: 0;
+  width: 100%;
   padding: 0;
-  font-size: 14px;
-  text-align: center;
-  align-self: center;
+  margin: 0 100px;
+  display: none;
+}
+
+.st-Header_Logo {
+  display: block;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid $mono-color3;
+  border-radius: 4px;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-indent: 100%;
   white-space: nowrap;
+  background-image: url(str-replace($logo-icon, "000000", "222222"));
+  &:hover {
+    background-color: rgba($mono-color7, .4);
+  }
 }

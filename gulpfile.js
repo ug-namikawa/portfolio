@@ -82,17 +82,17 @@ gulp.task('browser-sync', () => {
     server: {
       baseDir: './dist/'
     },
-    // open: 'external',
+    // open: 'external', // ipアドレスで開く
   });
 });
 
 gulp.task('watch', ['build', 'browser-sync'], () => {
   gulp.watch('assets/**/*.scss', ['scss']);
-  gulp.watch('./assets/**/*.+(jpg|png|gif|svg|ico)', ['image']);
-  gulp.watch('./assets/**/*.html', ['html']);
+  gulp.watch('assets/**/*.+(jpg|png|gif|svg|ico)', ['image']);
+  gulp.watch('assets/**/*.html', ['html']);
   gulp.watch('assets/**/*.ejs', ['ejs']);
-  gulp.watch('./assets/**/*.js', ['babel']);
-  gulp.watch(['./dist/**/*.html', './dist/**/*.css', './dist/**/*.js', './dist/**/*.+(jpg|png|gif|svg|ico)'], () => {
+  gulp.watch('assets/**/*.js', ['babel']);
+  gulp.watch(['dist/**/*.html', 'dist/**/*.css', 'dist/**/*.js', 'dist/**/*.+(jpg|png|gif|svg|ico)'], () => {
     browserSync.reload();
   });
 });

@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <% var meta = {
-  title: 'mock',
-  description: 'mock説明文'
+  title: 'portforio',
+  description: 'portforio'
 }; %>
 <html xml:lang="ja" lang="ja">
 <head>
   <%- include('./component/config/_head', meta) %>
 </head>
 <body>
-  <!-- 共通ヘッダー -->
+  <!-- Header -->
   <%- include('./component/structure/_Header', meta) %>
-  <div>あいうえお</div>
+  <main class="st-Main">
+    <%- include('./component/pages/top/_Introduction') %>
+    <div class="tp-Contents">
+      <div class="tp-Contents_Item">
+        <img class="tp-Contents_Image" src="./image/demo_01.jpg" alt="">
+      </div>
+      <div class="tp-Contents_Item">
+        <img class="tp-Contents_Image" src="./image/demo_02.jpg" alt="">
+      </div>
+      <div class="tp-Contents_Item">
+        <img class="tp-Contents_Image" src="./image/demo_03.jpg" alt="">
+      </div>
+      <div class="tp-Contents_Item">
+        <img class="tp-Contents_Image" src="./image/demo_04.jpg" alt="">
+      </div>
+      <div class="tp-Contents_Item">
+        <img class="tp-Contents_Image" src="./image/demo_05.jpg" alt="">
+      </div>
+      <div class="tp-Contents_Item">
+        <img class="tp-Contents_Image" src="./image/demo_06.jpg" alt="">
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <%- include('./component/structure/_Footer', meta) %>
 </body>
 </html>
