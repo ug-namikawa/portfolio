@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<% var meta = {
+  title: 'portforio',
+  description: 'portforio'
+}; %>
+<html xml:lang="ja" lang="ja">
+<head>
+  <%- include('./component/config/_head', meta) %>
+</head>
+<body>
+  <!-- Header -->
+  <%- include('./component/structure/_Header', meta) %>
+  <main class="st-Main">
+    <%- include('./component/pages/top/_Introduction') %>
+    <%- include('./component/pages/top/_Contents') %>
+  </main>
+  <!-- Footer -->
+  <%- include('./component/structure/_Footer', meta) %>
+</body>
+</html>

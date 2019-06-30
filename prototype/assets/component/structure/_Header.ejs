@@ -1,0 +1,13 @@
+<header class="st-Header">
+  <h1 class="st-Header_Title"><%= title %></h1>
+  <a class="st-Header_Logo" href="#">namikawa</a>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let targetElement = document.querySelector(".st-Header_Back");
+    targetElement.addEventListener("click", () => {
+      location.href = "./index.html";
+    })
+  })
+</script>

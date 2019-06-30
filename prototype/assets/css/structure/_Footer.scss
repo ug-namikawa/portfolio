@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/*-----------------
+  Footer
+-----------------*/
+
+.st-Footer {
+  padding: 40px;
+  margin: 0;
+}
+
+.st-Footer_List {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.st-Footer_Item {
+  & + & {
+    margin-left: 8px;
+  }
+}
+
+.st-Footer_Link {
+  display: flex;
+  height: 28px;
+  width: 28px;
+  padding: 6px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: $mono-color1;
+  transition: .2s all ease;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.st-Footer_Icon {
+  flex: 1 1 0%;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+.st-Footer_Icon-twitter {
+  @extend .st-Footer_Icon;
+  background-image: url(str-replace($twitter-icon, "252525", "ffffff"));
+}
+
+.st-Footer_Icon-facebook {
+  @extend .st-Footer_Icon;
+  background-image: url(str-replace($facebook-icon, "252525", "ffffff"));
+}
+
+.st-Footer_Author {
+  color: $mono-color3;
+  font-size: 12px;
+}

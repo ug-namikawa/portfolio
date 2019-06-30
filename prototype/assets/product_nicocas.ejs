@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<% var meta = {
+  title: 'portforio',
+  description: 'portforio'
+}; %>
+<html xml:lang="ja" lang="ja">
+<head>
+  <%- include('./component/config/_head', meta) %>
+</head>
+<body>
+  <!-- Header -->
+  <%- include('./component/structure/_Header', meta) %>
+  <main class="st-Main">
+    <%- include('./component/pages/top/_Introduction') %>
+    <div class="pr-Layout_Main">
+      <div class="pr-Contents">
+        <figure class="pr-Contents_Thumbnail">
+          <img class="pr-Contents_Image" src="./image/product_nicocas.png" alt="">
+        </figure>
+        <div class="pr-Contents_Title">
+          nicocas
+        </div>
+        <div class="pr-Contents_Message">
+          ほげほげほげー
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <%- include('./component/structure/_Footer', meta) %>
+</body>
+</html>

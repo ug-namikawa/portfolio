@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*-----------------
+  Header
+-----------------*/
+
+.st-Header {
+  position: relative;
+  display: flex;
+  height: 56px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.st-Header_Title {
+  width: 100%;
+  padding: 0;
+  margin: 0 100px;
+  display: none;
+}
+
+.st-Header_Logo {
+  display: block;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid $mono-color3;
+  border-radius: 4px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background-image: url(str-replace($logo-icon, "000000", "222222"));
+  &:hover {
+    background-color: rgba($mono-color7, .4);
+  }
+}
