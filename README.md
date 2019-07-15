@@ -1,4 +1,4 @@
-# nsen design mock
+# portfolio
 
 ## URL
 https://ug-namikawa.github.io/portfolio/dist/

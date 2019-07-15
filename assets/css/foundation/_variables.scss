@@ -50,3 +50,21 @@ $z-index:(
 }
 
 $z-index: reverse($z-index);
+
+
+
+// breakpoint min-width
+$breakpoint-up: (
+  'md': 'screen and (min-width: 1072px)'
+) !default;
+
+// breakpoint max-width
+$breakpoint-down: (
+  'sp': 'screen and (max-width: 480px)'
+) !default;
+
+@mixin mq-down($breakpoint: sp) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
