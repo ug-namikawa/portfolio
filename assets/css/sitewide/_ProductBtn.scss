@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/*-----------------
+  共通 ボタン
+-----------------*/
+
+.sw-ProductBtn {
+  @include button-reset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 8px 16px;
+  line-height: 1;
+  text-decoration: none;
+  transition: all .2s ease;
+  &[disabled] {
+    cursor: default;
+    opacity: .25;
+  }
+}
+
+.sw-ProductBtn_Text {
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  transition: all .2s ease;
+}
+
+// 基本ボタン
+.sw-ProductBtn-default {
+  @extend .sw-ProductBtn;
+  background-color: $mono-color1;
+  border-color: $mono-color1;
+  padding: 12px 24px;
+  border-radius: 20px;
+  .sw-ProductBtn_Text {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  &:not([disabled]):hover {
+    background-color: rgba($mono-color1, .9);
+    border-color: rgba($mono-color1, .9);
+  }
+}
+
+// 基本ボタン（大）
+.sw-ProductBtn-defaultlarge {
+  @extend .sw-ProductBtn-default;
+  padding: 10px;
+}
+
+// 強調ボタン
+.sw-ProductBtn-accent {
+  @extend .sw-ProductBtn;
+  background-color: $accentColor;
+  border-color: $accentColor;
+  .sw-ProductBtn_Text {
+    color: #fff;
+  }
+  &:not([disabled]):hover {
+    background-color: rgba($accentColor, .9);
+    border-color: rgba($accentColor, .9);
+  }
+}
+
+// 詳細ボタン
+.sw-ProductBtn-detail {
+  @extend .sw-ProductBtn;
+  background-color: #fff;
+  border-color: $accentColor;
+  .sw-ProductBtn_Text {
+    color: $accentColor;
+  }
+  &:not([disabled]):hover {
+    background-color: $accentColor;
+    border-color: $accentColor;
+    .sw-ProductBtn_Text {
+      color: #fff;
+    }
+  }
+}
+
+// キャンセルや戻るボタン
+.sw-ProductBtn-cancel {
+  @extend .sw-ProductBtn;
+  background-color: #fff;
+  border-color: #e5e5e5;
+  .sw-ProductBtn_Text {
+    color: #666;
+  }
+}
+
+.sw-ProductBtn_Icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.sw-ProductBtn_Icon-github {
+  @extend .sw-ProductBtn_Icon;
+  background-image: url(str-replace($github-icon, "252525", "ffffff"));
+}
+
+.sw-ProductBtn_Icon-magnify {
+  @extend .sw-ProductBtn_Icon;
+  background-size: 16px;
+  background-image: url(str-replace($magnify-icon, "252525", "ffffff"));
+}

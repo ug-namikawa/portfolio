@@ -41,14 +41,12 @@
 
 .tp-Product_List {
   list-style: none;
-  margin: 0;
+  margin: 48px 0 0;
   padding: 0;
-  background: green;
   display: flex;
 }
 
 .tp-Product_Item {
-  background: pink;
   & + & {
     margin-left: 16px;
   }
