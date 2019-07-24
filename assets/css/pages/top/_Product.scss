@@ -6,12 +6,9 @@
   // font-family: $product-font-family;
   margin: 0px 0;
   padding: 100px 40px;
-  background: $mono-color6;
+  background-color: $mono-color6;
   display: flex;
   align-items: center;
-  & + & {
-    background-image: linear-gradient(to right, #140A17 0%, #041e2a 50%, #140A17 100%);
-  }
 }
 
 .tp-Product_Details {
@@ -50,4 +47,12 @@
   & + & {
     margin-left: 16px;
   }
+}
+
+
+
+.tp-Product-dark {
+  @extend .tp-Product;
+  background-image: linear-gradient(to right, #140A17 0%, #041e2a 50%, #140A17 100%);
+  color: #fff;
 }
