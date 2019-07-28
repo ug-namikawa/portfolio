@@ -28,6 +28,7 @@
     "gulp-sass": "^4.0.1",
     "gulp-sass-glob": "^1.0.9",
     "run-sequence": "^2.2.1",
-    "axios": ">=0.18.1"
+    "axios": ">=0.18.1",
+    "lodash.template": ">=4.5.0"
   }
 }
