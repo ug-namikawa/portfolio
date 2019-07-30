@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<% var meta = {
+  title: 'portforio',
+  description: 'jikken'
+}; %>
+<html xml:lang="ja" lang="ja">
+<head>
+  <%- include('./component/config/_head', meta) %>
+</head>
+<body>
+  <!-- Header -->
+  <%- include('./component/structure/_Header', meta) %>
+  <main class="st-Main">
+    <%- include('./component/pages/top/_Introduction') %>
+    <div class="pr-Layout_Main">
+      <%- include('./component/pages/product/jikken/_Contents') %>
+      <%- include('./component/pages/product/jikken/_Gallery') %>
+    </div>
+  </main>
+  <!-- Footer -->
+  <%- include('./component/structure/_Footer', meta) %>
+</body>
+</html>
