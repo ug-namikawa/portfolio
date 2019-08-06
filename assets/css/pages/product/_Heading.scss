@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+// Heading
+
+.pr-Heading {
+  // height: 100px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
+  justify-content: center;
+  color: #111;
+}
+
+.pr-Heading_Title {
+  order: 2;
+  font-size: 26px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin: 16px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pr-Heading_Number {
+  order: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.pr-Heading_Count {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #111;
+}
+
+.pr-Heading_Type {
+  order: 3;
+  margin: 0;
+  font-size: 16px;
+  color: #aaa;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+}

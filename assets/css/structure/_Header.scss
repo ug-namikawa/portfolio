@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid $mono-color5;
-  background-color: #fff;
+  // background-color: #fff;
   // background-color: #efeff0;
 }
 
@@ -34,13 +34,14 @@
   width: 30px;
   height: 30px;
   box-sizing: border-box;
-  border: 1px solid $mono-color5;
-  border-radius: 50%;
+  // border: 1px solid $mono-color5;
+  border-radius: 3px;
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  background-image: url(str-replace($logo-icon, "000000", "222222"));
+  background-image: url(str-replace($logo-icon, "000000", "ffffff"));
+  background-color: $mono-color1;
   &:hover {
-    background-color: rgba($mono-color7, .4);
+    background-color: rgba($mono-color1, .9);
   }
 }

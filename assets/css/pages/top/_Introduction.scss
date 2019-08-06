@@ -3,8 +3,14 @@
 // Introduction
 
 .tp-Introduction {
-  margin: 80px 40px;
-  font-family: "M PLUS 1p";
+  // margin: 80px 40px;
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  height: calc(100vh - 57px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .tp-Introduction_Title {
@@ -17,7 +23,7 @@
 .tp-Introduction_Description {
   margin: 12px 0 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
-  color: $mono-color3;
+  color: #aaa;
 }

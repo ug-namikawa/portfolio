@@ -82,6 +82,7 @@ gulp.task('browser-sync', () => {
     server: {
       baseDir: './dist/'
     },
+    ghostMode: false,
     // open: 'external', // ipアドレスで開く
   });
 });

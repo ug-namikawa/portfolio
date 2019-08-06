@@ -7,7 +7,6 @@
   flex-flow: column wrap;
   max-width: 900px;
   margin: 40px auto;
-  font-family: "M PLUS 1p";
 }
 
 .pr-Contents_Thumbnail {
@@ -24,14 +23,15 @@
 }
 
 .pr-Contents_Title {
-  font-size: 24px;
+  font-size: 18px;
   margin: 40px 0 0;
+  font-weight: bold;
 }
 
 .pr-Contents_Message {
   font-size: 14px;
   line-height: 1.6;
-  margin: 24px 0;
+  margin: 12px 0;
 }
 
 .pr-Contents_Link {

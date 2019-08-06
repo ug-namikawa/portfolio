@@ -7,7 +7,7 @@
   min-width: $site-width;
   margin: 0;
   padding: 100px 40px;
-  background-color: #fafafa;
+  background-color: #fff;
 }
 
 .tp-Product_Outline {
@@ -24,7 +24,7 @@
 }
 
 .tp-Product_Title {
-  font-size: 48px;
+  font-size: 40px;
 }
 
 .tp-Product_Description {
@@ -65,6 +65,7 @@
 
 .tp-Product-dark {
   @extend .tp-Product;
-  background-image: linear-gradient(to right, #140A17 0%, #041e2a 50%, #140A17 100%);
   color: #fff;
+  // background-image: linear-gradient(to right, #140A17 0%, #041e2a 50%, #140A17 100%);
+  background-color: #15202B;
 }
