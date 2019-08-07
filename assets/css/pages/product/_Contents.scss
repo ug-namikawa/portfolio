@@ -3,15 +3,15 @@
 // Contents
 
 .pr-Contents {
-  display: flex;
-  flex-flow: column wrap;
+  // display: flex;
+  // flex-flow: column wrap;
   max-width: 900px;
   margin: 40px auto;
 }
 
-.pr-Contents_Thumbnail {
+.pr-Contents_Picture {
   display: flex;
-  margin: 0;
+  margin: 40px 0;
   padding: 0;
   border-radius: 4px;
   border: 1px solid #e6e6e6;
@@ -26,6 +26,13 @@
   font-size: 18px;
   margin: 40px 0 0;
   font-weight: bold;
+}
+
+.pr-Contents_Role {
+  font-size: 14px;
+  margin: 12px 0;
+  color: $mono-color2;
+  line-height: 1;
 }
 
 .pr-Contents_Message {

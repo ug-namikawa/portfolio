@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+// Display
+
+.pr-Display {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pr-Display_Item {
+  margin: 4px 0;
+  flex: 0 0 49%;
+  &:nth-of-type(even) {
+    margin-left: 1%;
+  }
+}
+
+.pr-Display_Picture {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+.pr-Display_Image {
+  width: 100%;
+}
+
+.pr-Display_Title {
+  font-size: 18px;
+  margin: 40px 0 0;
+  font-weight: bold;
+}
+
+.pr-Display_Message {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 12px 0;
+}
