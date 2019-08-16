@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="og:type" content="website">
+<meta property="og:url" content="<%= url %>">
+<meta property="og:image" content="<%= image %>">
+<meta property="og:title" content="<%= title %>">
+<meta property="og:site_name" content="<%= title %>">
+<meta property="og:description" content="<%= description %>">
+<meta name="twitter:card" content="<%= twitter_card_type %>">
+<title><%= title %></title>
+<meta name="description" content="<%= description %>">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="./image/config/favicon.ico">
+<%# canonicalが定義されていればそれを定義し、なければURLををそのまま設定する%>
+<link rel="canonical" href="<%= (typeof canonical == 'object' && canonical)? canonical: url %>">
+<%# 静的ページ用共通ヘッダー、共通フッターで必要なcss %>
+<link rel="stylesheet" href="./scss/structure/structure.css">

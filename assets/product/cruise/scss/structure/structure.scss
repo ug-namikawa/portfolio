@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+// @todo
+// このscssは実態としての単体のcssを生成したく無いが、生1から持ってきたページで使う為、しかたがなく生成しています。
+// 全てのページのリファクタが終えたら他のコンポーネントscss同様にcssを生成しない形に修正する
+@import "../common/variables";
+@import "Header";
+@import "Footer";

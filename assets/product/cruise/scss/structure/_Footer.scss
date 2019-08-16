@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*--------------------
+st-Footer
+--------------------*/
+
+.st-Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1072px;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  background-color: #252525;
+  @include mq-down(sp) {
+    min-width: auto;
+  }
+}
+
+.st-Footer_Copyright {
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+}

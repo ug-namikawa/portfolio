@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<%
+var meta = {
+    url: `https://site.live.nicovideo.jp/cruise.html`,
+    image: 'https://nicolive.cdn.nimg.jp/live/simg/public/inc/assets/zero/img/base/og_image.png',
+    title: 'ニコ生クルーズ - ニコニコ生放送',
+    description: 'クルーズ待ち放送を巡回する番組や、人気の動画を巡回していく番組など、様々なタイプのクルーズ番組が追加されました',
+    page: 'cruise',
+    twitter_card_type: 'summary',
+};
+%>
+<html xml:lang="ja" lang="ja">
+
+<head>
+    <%- include('./component/config/_head', meta) %>
+    <link rel="stylesheet" href="./scss/page/cruise/cruise.css">
+</head>
+
+<body>
+    <%# 静的ページ用共通ヘッダー %>
+    <%- include('./component/structure/_Header') %>
+
+    <main class="cp-Main">
+      <!-- ニコ生クルーズヘッダー -->
+      <%- include('./component/page/cruise/_Header') %>
+      <!-- Share -->
+      <%- include('./component/page/cruise/_Share', meta) %>
+      <!-- 放送中のニコ生クルーズ番組一覧 -->
+      <!-- ニコ生クルーズ番組一覧 -->
+      <%- include('./component/page/cruise/_Program') %>
+      <!-- ニコ生クルーズの使い方 -->
+      <%- include('./component/page/cruise/_Manual') %>
+    </main>
+
+    <%# 静的ページ用共通フッター %>
+    <%- include('./component/structure/_Footer') %>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<%
+  var ShareText = "ニコ生クルーズ";
+  var TwitterShareText = encodeURIComponent(ShareText);
+  var LineShareText = encodeURIComponent(ShareText);
+%>
+
+<%# Share %>
+<section class="cp-Share">
+  <h1 class="cp-Share_Title">シェアする</h1>
+  <div class="cp-Share_List">
+    <a class="cp-Share_Anchor-twitter" href="http://twitter.com/share?url=<%= url %>&text=<%= TwitterShareText %>" target="_new">
+      <span class="cp-Share_Icon-twitter">ツイート</span>
+    </a>
+    <a class="cp-Share_Anchor-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<%= url %>" target="_new">
+      <span class="cp-Share_Icon-facebook">Facebookでシェア</span>
+    </a>
+    <a class="cp-Share_Anchor-line" href="http://line.me/R/msg/text/?<%= LineShareText %> <%= url %>" target="_new">
+      <span class="cp-Share_Icon-line">LINEで送る</span>
+    </a>
+  </div>
+</section>

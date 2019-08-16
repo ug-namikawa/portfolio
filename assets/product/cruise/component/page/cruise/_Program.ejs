@@ -1,0 +1,74 @@
+<%# 放送中のニコ生クルーズ番組一覧 %>
+<section class="cp-Program">
+  <div class="cp-Program_Inner">
+    <h1 class="cp-Program_Header">放送中のニコ生クルーズ番組一覧</h1>
+    <div class="cp-Program_Empty">現在放送中の番組はありません</div>
+    <ul class="cp-Program_List" id="onairProgram">
+      <% for (var i = 0; i < 5; i++) { %>
+      <li class="cp-Program_Item">
+        <a href="https://www.nicovideo.jp/user/79528787" class="cp-Program_Link">
+          <figure class="cp-Program_Thumbnail">
+            <span class="cp-Program_Icon-live">LIVE</span>
+            <img class="cp-Program_Image" src="./image/page/cruise/thumb_popular.jpg" alt="動画クルーズ">
+          </figure>
+          <h2 class="cp-Program_Title">動画クルーズ</h2>
+        </a>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+</section>
+
+<%# ニコ生クルーズ番組一覧 %>
+<section class="cp-Program-even">
+  <div class="cp-Program_Inner">
+    <h1 class="cp-Program_Header">ニコ生クルーズ番組一覧</h1>
+    <ul class="cp-Program_List">
+      <li class="cp-Program_Item">
+        <a href="https://www.nicovideo.jp/user/70969122" class="cp-Program_Link">
+          <figure class="cp-Program_Thumbnail">
+            <img class="cp-Program_Image" src="./image/page/cruise/thumb_live.jpg" alt="生放送クルーズ">
+          </figure>
+          <h2 class="cp-Program_Title">生放送クルーズ</h2>
+          <p class="cp-Program_Description">ニコニコ生放送の中から「クルーズ待ち」設定になっているユーザー生放送番組をランダムに巡回します</p>
+        </a>
+      </li>
+      <li class="cp-Program_Item">
+        <a href="https://www.nicovideo.jp/user/70969166" class="cp-Program_Link">
+          <figure class="cp-Program_Thumbnail">
+            <img class="cp-Program_Image" src="./image/page/cruise/thumb_custom_cast.jpg" alt="カスタムキャストクルーズ">
+          </figure>
+          <h2 class="cp-Program_Title">カスタムキャストクルーズ</h2>
+          <p class="cp-Program_Description">ニコニコ生放送の中から、カスタムキャストを使った番組を巡回するクルーズです</p>
+        </a>
+      </li>
+      <li class="cp-Program_Item">
+        <a href="https://www.nicovideo.jp/user/79528787" class="cp-Program_Link">
+          <figure class="cp-Program_Thumbnail">
+            <img class="cp-Program_Image" src="./image/page/cruise/thumb_popular.jpg" alt="動画クルーズ">
+          </figure>
+          <h2 class="cp-Program_Title">動画クルーズ</h2>
+          <p class="cp-Program_Description">ニコニコ動画の中から、様々なジャンルにわけて人気動画を巡回するクルーズです。</p>
+        </a>
+      </li>
+      <li class="cp-Program_Item">
+        <a href="https://www.nicovideo.jp/user/77252622" class="cp-Program_Link">
+          <figure class="cp-Program_Thumbnail">
+            <img class="cp-Program_Image" src="./image/page/cruise/thumb_nsen_toho.jpg" alt="東方 Nsen">
+          </figure>
+          <h2 class="cp-Program_Title">東方 Nsen</h2>
+          <p class="cp-Program_Description">ニコニコ動画の東方カテゴリの中から、動画リクエストに答えて放送していくタイプの番組です。</p>
+        </a>
+      </li>
+      <li class="cp-Program_Item">
+        <a href="https://www.nicovideo.jp/user/77252482" class="cp-Program_Link">
+          <figure class="cp-Program_Thumbnail">
+            <img class="cp-Program_Image" src="./image/page/cruise/thumb_nsen_vocaloid.jpg" alt="VOCALOID Nsen">
+          </figure>
+          <h2 class="cp-Program_Title">VOCALOID Nsen</h2>
+          <p class="cp-Program_Description">ニコニコ動画のVOCALOIDカテゴリの中から、動画リクエストに答えて放送していくタイプの番組です。</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

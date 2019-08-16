@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* static page variables */
+
+/* Font Family */
+$base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Meiryo", "メイリオ", sans-serif;
+$base-number-font-family: "Avenir Next", "Lato", sans-serif;
+
+// Site Width
+$base-site-width: 1024px;
+$base-site-full-width: 1072px; // 1024px + 24px * 2（左右padding）
+
+// Monotone Color
+$mono-color1: #252525;
+$mono-color2: #525252;
+$mono-color3: #999;
+$mono-color4: #ccc;
+$mono-color5: #e6e6e6;
+$mono-color6: #f4f4f4;
+$mono-color7: #fff;
+
+// variable
+$accent-color: #4990e2;
+$red-color: #ee4949;
+$blue-color: #0080ff;
+$premium-color: #d9a300;
+$imageRadius: 8px;
+
+// SNS Color
+$twitter-color: #1da1f2;
+$facebook-color: #3c5998;
+$line-color: #00b900;
+
+// breakpoint min-width
+$breakpoint-up: (
+  'md': 'screen and (min-width: 1072px)'
+) !default;
+
+// breakpoint max-width
+$breakpoint-down: (
+  'sp': 'screen and (max-width: 480px)'
+) !default;
+
+@mixin mq-down($breakpoint: sp) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
