@@ -1,0 +1,11 @@
+$mv-MainVisual-animation-timing: 300;
+$mv-MainVisual-animation-duration: 950;
+
+$mv-InnerContent-animation-timing: $mv-MainVisual-animation-timing + $mv-MainVisual-animation-duration + 200;
+$mv-InnerContent-animation-duration: 700;
+
+$mv-SnsShareMenu-animation-timing: $mv-InnerContent-animation-timing + $mv-InnerContent-animation-duration + 400;
+$mv-Notify-animation-timing: $mv-InnerContent-animation-timing + $mv-InnerContent-animation-duration + 400;
+$mv-NicocasPromotion-animation-timing: $mv-InnerContent-animation-timing + $mv-InnerContent-animation-duration + 400;
+
+$mv-Slideshow-animation-timing: $mv-MainVisual-animation-timing;

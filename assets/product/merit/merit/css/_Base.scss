@@ -1,0 +1,42 @@
+/* base --------------------------------------------------------- */
+@font-face {
+  font-family: "YuGothicForWindows";
+  font-weight: normal;
+  src: local("YuGothic-Medium"),
+       local("Yu Gothic Medium"),
+       local("YuGothic-Regular");
+}
+
+@font-face {
+  font-family: "YuGothicForWindows";
+  font-weight: bold;
+  src: local("YuGothic-Bold"),
+       local("Yu Gothic"),
+}
+
+body , html {
+  height: 100%;
+  width: 100%;
+  font-family:
+    Roboto,
+    'Helvetica Neue',
+    Helvetica,
+    Arial,
+    YuGothicForWindows,
+    YuGothic,
+    "Hiragino Kaku Gothic ProN",
+    Meiryo,
+    sans-serif;
+}
+body {
+  font-size: 14px;
+  line-height: 14px;
+  line-height: 1.3;
+  color: #252525;
+  -webkit-text-size-adjust: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+main {
+  overflow: hidden;
+}

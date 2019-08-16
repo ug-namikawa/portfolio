@@ -1,0 +1,106 @@
+.mv-InnerContent {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.mv-InnerContent_Logo {
+  background-image: url(../image/logo-jillenhousou.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 652px;
+  height: 264px;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, .5));
+  font-size: 0;
+  color: transparent;
+  animation-name: mv-InnerContent_Logo-Movein;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-delay: #{$mv-InnerContent-animation-timing}ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  will-change: opacity transform;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 100% / 300 * 40;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 48px);
+  }
+}
+
+@keyframes mv-InnerContent_Logo-Movein {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.mv-InnerContent_Button {
+  margin-top: 30px;
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0, 0, 0, .4);
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  font-family: "Yu Gothic", "YuGothic", sans-serif;
+  letter-spacing: 7px;
+  line-height: 1;
+  font-feature-settings: "palt" 1;
+  animation-name: mv-InnerContent_Button-Movein;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-delay: #{$mv-InnerContent-animation-timing + 150}ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  will-change: opacity transform;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  @media screen and (max-width: 530px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 440px) {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 420px) {
+    font-size: 13px;
+  }
+}
+
+@keyframes mv-InnerContent_Button-Movein {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

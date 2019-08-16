@@ -1,0 +1,110 @@
+@import "./_AnimationTiming";
+
+.mv-MainVisual {
+  width: 100%;
+  // height: 100vh; iOSでダメなのでjsで100vh相当を取ります
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 769px) {
+    min-width: 1080px;
+    min-height: 600px;
+  }
+}
+
+.mv-MainVisual_MovingDarkCover {
+  animation-name: mv-MainVisual_MovingDarkCoverAnimation;
+  animation-duration: #{$mv-MainVisual-animation-duration}ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: #{$mv-MainVisual-animation-timing}ms;
+  animation-fill-mode: forwards;
+  background-color: #252525;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: opacity;
+  pointer-events: none;
+}
+
+@keyframes mv-MainVisual_MovingDarkCoverAnimation {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  46% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.mv-MainVisual_MovingLightCover {
+  animation-name: mv-MainVisual_MovingCoverAnimation;
+  animation-duration: #{$mv-MainVisual-animation-duration}ms;
+  animation-timing-function: cubic-bezier(.33,.49,.42,1);
+  animation-iteration-count: 1;
+  animation-delay: #{$mv-MainVisual-animation-timing}ms;
+  animation-fill-mode: forwards;
+  background-color: #fff;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom;
+  transform: scale(2.5) translateY(-110%);
+  will-change: transform;
+}
+
+@keyframes mv-MainVisual_MovingCoverAnimation {
+  0% {
+    transform: scale(2.5) translateY(-110%);
+  }
+  100% {
+    transform: scale(2.5) translateY(120%);
+  }
+}
+
+.mv-MainVisual_MovingLightCoverBefore,
+.mv-MainVisual_MovingLightCoverAfter {
+  background-color: inherit;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  transform-origin: center;
+}
+
+.mv-MainVisual_MovingLightCoverBefore {
+  top: 0;
+  transform: scale(0.4) translateY(-125%) skewY(-6deg);
+}
+
+.mv-MainVisual_MovingLightCoverAfter {
+  bottom: 0;
+  transform: scale(0.4) translateY(125%) skewY(-6deg);
+}
+
+[data-scene="opened"] {
+  .mv-MainVisual_MovingDarkCover {
+    display: none;
+  }
+}
+
+@import "./parts/_InnerContent";
+@import "./parts/_Slideshow";
+@import "./parts/_SnsShareMenu";
+@import "./parts/_NicocasPromotion";

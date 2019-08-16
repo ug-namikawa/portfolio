@@ -1,0 +1,106 @@
+/* base --------------------------------------------------------- */
+@font-face {
+  font-family: "Hiragino Maru Gothic Pro";
+  font-weight: normal;
+  src: local("Hiragino Maru Gothic Pro"),
+}
+
+@font-face {
+  font-family: "Hiragino Kaku Gothic ProN";
+  font-weight: bold;
+  src: local("YuGothic-Bold"),
+       local("Yu Gothic"),
+}
+
+body , html {
+  height: 100%;
+  width: 100%;
+  font-family:
+  "ヒラギノ丸ゴ Pro W4",
+  "ヒラギノ丸ゴ Pro",
+  "Hiragino Maru Gothic Pro",
+  "HG丸ｺﾞｼｯｸM-PRO",
+  "HGMaruGothicMPRO",
+  Roboto,
+  'Helvetica Neue',
+  Helvetica,
+  Arial,
+  YuGothic,
+  "Hiragino Kaku Gothic ProN",
+  Meiryo,
+  sans-serif;
+}
+body {
+  font-size: 14px;
+  line-height: 14px;
+  line-height: 1.3;
+  color: #252525;
+  -webkit-text-size-adjust: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.clearfix:after {
+    content:" ";
+    display:block;
+    clear:both;
+}
+.bs-Wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.bs-Wrapper_Inner {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.bs-Br_Mode-pc {
+  display: block;
+}
+.bs-Flow_ButtonBox {
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.bs-Flow_Button {
+  text-align: center;
+  display: inline-block;
+  background-color: #252525;
+  border-radius: 100px;
+  transition: background-color 100ms ease-out, transform 100ms ease-out;
+  width: 318px;
+  padding: 16px 40px;
+  box-sizing: border-box;
+  margin-right: 16px;
+  &:hover {
+    background-color: darken(#252525, 5%);
+    transform: scale(0.95);
+
+    &:before {
+      transform: scale(1/0.95);
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.bs-Flow_ButtonText {
+  height: 24px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px){
+  .bs-Br_Mode-pc {
+    display:none;
+  }
+  .bs-ButtonBox_Mode-sp {
+    display: none;
+  }
+  .bs-Flow_Button {
+    max-width: 100%;
+  }
+}

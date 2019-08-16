@@ -1,0 +1,20 @@
+<%
+  var siteUrl = "http://site.nicovideo.jp/nicocas/pc/index.html";
+  var ShareText = "実験放送 | みんなで作るちょっと未来の生放送";
+  var TwitterHashTag = "#niconico #実験放送 #nicocas";
+  var FacebookShareText = encodeURIComponent(ShareText);
+  var TwitterShareText = encodeURIComponent(ShareText + " " + TwitterHashTag);
+  var LineShareText = encodeURIComponent(ShareText);
+%>
+<section class="mv-SnsShareMenu" id="sns-share-menu">
+  <h2 class="mv-SnsShareMenu_Title">シェアする</h2>
+  <div class=" mv-SnsShareMenu_TweetShareButtonLabel" aria-label="ツイート">
+    <a class="mv-SnsShareMenu_Anchor" href="http://twitter.com/share?url=<%= siteUrl %>&text=<%= TwitterShareText %>" target="_new"></a>
+  </div>
+  <div class="mv-SnsShareMenu_FacebookShareButtonLabel" aria-label="Facebooでシェア">
+    <a class="mv-SnsShareMenu_Anchor" href="https://www.facebook.com/sharer/sharer.php?u=<%= siteUrl %>" target="_new"></a>
+  </div>
+  <div class="mv-SnsShareMenu_LineSHareButtonLabel" aria-label="LINEで送る">
+    <a class="mv-SnsShareMenu_Anchor" href="http://line.me/R/msg/text/?<%= LineShareText %> <%= siteUrl %>" target="_new"></a>
+  </div>
+</section>

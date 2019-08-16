@@ -1,0 +1,48 @@
+/* Footer --------------------------------------------------------- */
+.ft-Wrapper {
+  width: 100%;
+  min-width: 1080px;
+  background: #252525;
+}
+.ft-Wrapper_Inner {
+  width: 1080px;
+  height: 210px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.ft-Logo {
+  width: 155px;
+  height: 24.25px;
+  margin: 32px 0 0px;
+}
+.ft-Copy {
+  margin-top: 10px;
+  font-size: 10px;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px){
+  .ft-Wrapper {
+    min-width:auto;
+  }
+  .ft-Wrapper_Inner {
+    width: 100%;
+    height: 168px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .ft-Logo {
+    margin: 20px 0 0px;
+  }
+  .ft-Copy {
+    margin-top: 5px;
+    font-size:0.65rem;
+    color: #fff;
+  }
+}

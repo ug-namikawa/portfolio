@@ -1,0 +1,94 @@
+/*
+ * 特典一覧
+ */
+
+.tp-Privilege {
+  display: block;
+  position: relative;
+  > tbody {
+    display: block;
+  }
+  &::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc((100% - 130px)/2);
+    height: 100%;
+    border: 3px solid #d9a300;
+    pointer-events: none;
+  }
+}
+
+.tp-Privilege_List {
+  display: flex;
+  width: 100%;
+  // 下ボーダー
+  &:last-child {
+    border-bottom: 2px solid #e6e6e6;
+  }
+  &:nth-child(odd) {
+    background-color: #f9f9f9;
+    .tp-Privilege_Item {
+      &:last-child {
+        background-color: #f7edcc;
+      }
+    }
+  }
+}
+
+.tp-Privilege_Item {
+  flex: 1 1 0%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-top: 2px solid #e6e6e6;
+  border-left: 2px solid #e6e6e6;
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.4;
+  color: #525252;
+  min-height: 40px;
+  &:first-child {
+    text-align: left;
+    justify-content: left;
+  }
+  &:nth-child(1) {
+    width: 130px;
+    flex: 0 0 130px;
+  }
+  &:nth-child(3n) {
+    color: #d9a300;
+    background-color: rgba(#f7edcc, .3);
+  }
+  // 右ボーダー
+  &:last-child {
+    border-right: 2px solid #e6e6e6;
+  }
+}
+
+.tp-Privilege_Item-empty {
+  @extend .tp-Privilege_Item;
+  border: none;
+  background-color: #fff;
+}
+
+.tp-Privilege_Icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: bottom;
+}
+
+.tp-Privilege_Note {
+  margin-top: 10px;
+  margin-left: 1.5em;
+  font-size: 11px;
+  line-height: 120%;
+  color: #999;
+  text-indent: -1.5em;
+}

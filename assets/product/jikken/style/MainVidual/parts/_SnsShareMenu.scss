@@ -1,0 +1,127 @@
+@mixin mv-SnsShareMenu_LocalButtonLabel {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: background-color 100ms ease-out, transform 100ms ease-out;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 100ms ease-out;
+  }
+
+  &:hover {
+    background-color: darken(#fff, 5%);
+    transform: scale(0.95);
+
+    &:before {
+      transform: scale(1/0.95);
+    }
+  }
+
+  @media screen and (max-width: 530px) {
+    width: 36px;
+    height: 36px;
+
+    &:before {
+      width: 24px / 40 * 36;
+      height: 24px / 40 * 36;
+    }
+  }
+}
+
+.mv-SnsShareMenu {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-scoped="mv"] .mv-SnsShareMenu {
+  padding: 20px 28px;
+  animation-name: mv-SnsShareMenu-fadein;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-delay: #{$mv-SnsShareMenu-animation-timing}ms;
+  animation-fill-mode: forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transform: translate(0);
+  transition: transform 200ms ease-out;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    height: 40px;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+[data-scoped="ft"] .mv-SnsShareMenu {
+  padding: 8px 8px;
+}
+
+
+@keyframes mv-SnsShareMenu-fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mv-SnsShareMenu_Title {
+  font-size: 0;
+}
+.mv-SnsShareMenu_TweetShareButtonLabel {
+  @include mv-SnsShareMenu_LocalButtonLabel;
+  &:before {
+    background-image: url(../image/sns-twitter-symbol-icon.svg);
+  }
+}
+.mv-SnsShareMenu_FacebookShareButtonLabel {
+  @include mv-SnsShareMenu_LocalButtonLabel;
+  &:before {
+    background-image: url(../image/sns-facebook-symbol-icon.svg);
+  }
+  margin-left: 16px;
+
+  @media screen and (max-width: 530px) {
+    margin-left: 12px;
+  }
+}
+.mv-SnsShareMenu_LineSHareButtonLabel {
+  @include mv-SnsShareMenu_LocalButtonLabel;
+  &:before {
+    background-image: url(../image/sns-line-symbol-icon.svg);
+  }
+  margin-left: 16px;
+  @media screen and (max-width: 530px) {
+    margin-left: 12px;
+  }
+}
+
+.mv-SnsShareMenu_Anchor {
+  display: block;
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

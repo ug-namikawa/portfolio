@@ -1,0 +1,111 @@
+.mv-NicocasPromotion {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  animation-name: mv-NicocasPromotion-fadein;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-delay: #{$mv-NicocasPromotion-animation-timing}ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.mv-NicocasPromotion_AppLink {
+  position: relative;
+  width: 440px;
+  height: 68px;
+  background-color: #fff;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, .5));
+}
+
+.mv-NicocasPromotion_Catch {
+  background-image: url(../image/img_mv-nicocaspromotion_catch.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 440px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  top: -28px;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, .5));
+  font-size: 0;
+}
+
+.mv-NicocasPromotion_Logo {
+  background-image: url(../image/logo-nicocas.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 140px;
+  height: 30px;
+  position: absolute;
+  left: 16px;
+  top: 18px;
+  font-size: 0;
+}
+
+
+@mixin mv-NicocasPromotion_Badge {
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0;
+  position: absolute;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.mv-NicocasPromotion_Badge-appstore {
+  @include mv-NicocasPromotion_Badge;
+  background-image: url(../image/badge_ios.png);
+  width: 120px;
+  height: 40px;
+  top: 14px;
+  left: 168px;
+}
+
+.mv-NicocasPromotion_Badge-googleplay {
+  @include mv-NicocasPromotion_Badge;
+  background-image: url(../image/badge_googleplay.png);
+  width: 134px;
+  height: 40px;
+  top: 14px;
+  left: 294px;
+}
+
+@keyframes mv-NicocasPromotion-fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .mv-NicocasPromotion {
+    bottom: 20px;
+    left: 20px;
+  }
+  .mv-NicocasPromotion_Catch {
+    width: 100%;
+  }
+  .mv-NicocasPromotion_AppLink {
+    width: 100%;
+    text-align: center;
+  }
+  .mv-NicocasPromotion_Logo {
+    display: none;
+  }
+  .mv-NicocasPromotion_Badge-appstore {
+    position: static;
+    display: inline-block;
+  }
+
+  .mv-NicocasPromotion_Badge-googleplay {
+    position: static;
+    display: inline-block;
+  }
+}
