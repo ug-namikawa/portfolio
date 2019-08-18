@@ -13,15 +13,19 @@
 
 .pr-Display-three {
   @extend .pr-Display;
-  & .pr-Display_Item{
+  & .pr-Display_Item {
     flex: 0 0 calc((100% - 2%) / 3);
   }
-  & .pr-Display_Item:nth-of-type(odd){
+  & .pr-Display_Item:nth-of-type(odd) {
     margin-left: 1%;
   }
-  & .pr-Display_Item:nth-of-type(3n + 1){
+  & .pr-Display_Item:nth-of-type(3n + 1) {
     margin-left: 0;
   }
+}
+
+.pr-Display-split {
+  @extend .pr-Display;
 }
 
 .pr-Display_Item {
@@ -31,6 +35,17 @@
   &:nth-of-type(odd) {
     margin-left: 0;
   }
+}
+
+.pr-Display_Item-splitMain {
+  margin: 4px 0;
+  flex: 0 0 75%;
+}
+
+.pr-Display_Item-splitSub {
+  margin: 4px 0;
+  flex: 0 0 24%;
+  margin-left: 1%;
 }
 
 .pr-Display_Picture {

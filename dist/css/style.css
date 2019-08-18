@@ -744,7 +744,7 @@ body {
   width: 100%; }
 
 .pr-Contents_Title {
-  font-size: 18px;
+  font-size: 20px;
   margin: 40px 0 0;
   font-weight: bold; }
 
@@ -765,7 +765,7 @@ body {
   .pr-Contents_Link:hover {
     text-decoration: underline; }
 
-.pr-Display, .pr-Display-three {
+.pr-Display, .pr-Display-three, .pr-Display-split {
   max-width: 900px;
   margin: 80px auto 40px;
   padding: 0;
@@ -795,6 +795,19 @@ body {
   margin-left: 1%; }
   .pr-Display_Item:nth-of-type(odd) {
     margin-left: 0; }
+
+.pr-Display_Item-splitMain {
+  margin: 4px 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%; }
+
+.pr-Display_Item-splitSub {
+  margin: 4px 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24%;
+          flex: 0 0 24%;
+  margin-left: 1%; }
 
 .pr-Display_Picture {
   display: -webkit-box;
