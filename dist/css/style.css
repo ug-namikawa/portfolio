@@ -767,7 +767,7 @@ body {
 
 .pr-Display, .pr-Display-three {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 80px auto 40px;
   padding: 0;
   list-style: none;
   display: -webkit-box;
