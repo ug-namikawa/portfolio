@@ -5,7 +5,9 @@
 -----------------*/
 
 .st-Header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: #fafafa;
   display: flex;
   height: 56px;
   padding: 0;
