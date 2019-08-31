@@ -37,6 +37,33 @@
   }
 }
 
+.pr-Display_Caption {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.pr-Display_Title {
+  margin: 0 0 16px;
+  padding: 8px 20px;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: $mono-color1;
+  color: $mono-color7;
+  font-family: "Lato", sans-serif;
+}
+
+.pr-Display_TitleLink {
+  background-color: $mono-color1;
+  color: $mono-color7;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .pr-Display_Item-splitMain {
   margin: 4px 0;
   flex: 0 0 75%;
@@ -61,16 +88,4 @@
 
 .pr-Display_Image {
   width: 100%;
-}
-
-.pr-Display_Title {
-  font-size: 18px;
-  margin: 40px 0 0;
-  font-weight: bold;
-}
-
-.pr-Display_Message {
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 12px 0;
 }
