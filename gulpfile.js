@@ -24,6 +24,24 @@ gulp.task('build', ['clean'], (callback) => {
   );
 });
 
+gulp.task('release', (cb) => {
+  return runSequence(
+    'build',
+    'publicClean',
+    'publicCopy',
+    cb
+  );
+});
+
+gulp.task('publicClean', () => {
+  return del(['public']);
+});
+
+gulp.task('publicCopy', () => {
+  return gulp.src('./dist/**/*')
+    .pipe(gulp.dest('./public'))
+});
+
 gulp.task('html', () => {
   return gulp.src('./assets/**/*.html')
     .pipe(gulp.dest('./dist'))
