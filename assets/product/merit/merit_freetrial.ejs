@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<% var meta = {
+  title: 'niconicoプレミアム会員登録',
+  description: 'プレミアム会員のメリット紹介'
+}; %>
+<html xml:lang="ja" lang="ja">
+<head>
+  <%- include('./merit/component/_head', meta) %>
+</head>
+<body>
+  <main>
+
+    <section class="tp-Freetrial">
+      <h1 class="tp-Freetrial_Headline">今なら1ヶ月無料</h1>
+      <p class="tp-Freetrial_Content">720円 / 月を選択いただくと<span class="tp-Freetrial_Emphasis">1ヶ月間無料</span>でプレミアム会員の機能をご利用いただけます</p>
+      <ul class="tp-Freetrial_List">
+        <li class="tp-Freetrial_Item">※無料体験期間終了後、自動的に720円 / 月へと変更されます。</li>
+        <li class="tp-Freetrial_Item">※お使いのiTunesアカウントで過去に無料体験をご利用になった方には適用されません。</li>
+        <li class="tp-Freetrial_Item">※無料体験期間は開始日より起算して1ヶ月間です。</li>
+      </ul>
+    </section>
+
+    <%# プレミアムメリット %>
+    <%- include('./merit/component/_Merit') %>
+
+    <!-- お支払いについて -->
+    <section class="tp-Rule">
+      <h1 class="tp-Rule_Headline">お支払いについて</h1>
+      <div class="tp-Rule_Content">
+        <p>利用料金の支払いは、利用者のiTunesアカウントにて行われます。</p>
+      </div>
+    </section>
+    <!-- プレミアム会員の期間と更新について -->
+    <section class="tp-Rule">
+      <h1 class="tp-Rule_Headline">プレミアム会員の期間と更新について</h1>
+      <div class="tp-Rule_Content">
+        <ul>
+          <li>プレミアム会員は、有効期間が終了する直前の24時間以内に自動更新されます。</li>
+          <li>月額を選択した場合、1ヶ月ごとに自動更新され、1ヶ月分の利用料金が再度発生します。</li>
+          <li>年額を選択した場合、1年ごとに自動更新され、1年分の利用料金が再度発生します。</li>
+        </ul>
+      </div>
+    </section>
+    <!-- 解約について -->
+    <section class="tp-Rule">
+      <h1 class="tp-Rule_Headline">解約について</h1>
+      <div class="tp-Rule_Content">
+        プレミアム会員の解約は、プレミアム会員の有効期間が終了する24時間前までに、自動継続課金の設定を解除する必要があります。<br>
+        自動継続課金の解除は、iTunesアカウントの管理画面から行う事が出来ます。
+      </div>
+    </section>
+    <!-- プレミアム会員無料体験について -->
+    <section class="tp-Rule">
+      <h1 class="tp-Rule_Headline">プレミアム会員無料体験について</h1>
+      <div class="tp-Rule_Content">
+        <ul class="tp-Rule_List">
+          <li class="tp-Rule_ListItem">本キャンペーンは2019年9月17日(火) ～ 開始します。終了時期は別途お知らせいたします。</li>
+          <li class="tp-Rule_ListItem">無料体験期間中でもいつでもiTunesアカウントの管理画面から自動継続課金の設定をキャンセルできます。</li>
+          <li class="tp-Rule_ListItem">無料体験期間は、登録日より起算して1か月間です。</li>
+          <li class="tp-Rule_ListItem">無料体験期間終了の24時間前までに自動継続課金の設定のキャンセルがない場合、自動的に720円 / 月へと変更されます。</li>
+          <li class="tp-Rule_ListItem">本キャンペーン期間中、無料体験が適用されるのはお一人様1回のみとなります。またお使いのiTunesアカウントで過去に無料体験をご利用になった方には適用されません。</li>
+          <li class="tp-Rule_ListItem">決済時に720円の支払いと表示されますが、本キャンペーン対象の方には初月分の支払いは発生しません。（継続分の料金が表示されます）</li>
+          <li class="tp-Rule_ListItem">本キャンペーンは iOS版 ニコニコ生放送 アプリで登録した場合にのみ適用され、 niconico アプリやPC版 ニコニコ生放送で登録した場合は適用されません。間違って本キャンペーン対象外サービスにてプレミアム会員に登録した場合、返金対応等は致しかねますのでご了承ください。</li>
+          <li class="tp-Rule_ListItem">本キャンペーンで無料体験を行うと他niconicoサービスで同様のキャンペーンが適用されない可能性がありますのでご了承ください。</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
