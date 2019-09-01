@@ -1,7 +1,7 @@
 # portfolio
 
 ## URL
-https://ug-namikawa.github.io/portfolio/dist/
+https://ug-namikawa.github.io/portfolio/public/
 
 ## 使用方法
 
@@ -28,8 +28,7 @@ https://ug-namikawa.github.io/portfolio/dist/
   $ npm start
   ```
 
-
-# 利用可能なもの
+### 利用可能なもの
 
 - html
 - ejs
