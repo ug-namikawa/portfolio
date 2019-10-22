@@ -834,6 +834,12 @@ body {
   .pr-Display_TitleLink:hover {
     text-decoration: underline; }
 
+.pr-Display_TitleText {
+  margin: 0;
+  padding: 0;
+  background-color: #252525;
+  color: #fff; }
+
 .pr-Display_Item-splitMain {
   margin: 4px 0;
   -webkit-box-flex: 0;
@@ -1243,4 +1249,4 @@ body {
 
 .tp-Product-dark {
   color: #fff;
-  background-color: #15202B; }
+  background-color: #252525; }

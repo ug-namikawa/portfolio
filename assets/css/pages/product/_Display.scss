@@ -64,6 +64,13 @@
   }
 }
 
+.pr-Display_TitleText {
+  margin: 0;
+  padding: 0;
+  background-color: $mono-color1;
+  color: $mono-color7;
+}
+
 .pr-Display_Item-splitMain {
   margin: 4px 0;
   flex: 0 0 75%;
