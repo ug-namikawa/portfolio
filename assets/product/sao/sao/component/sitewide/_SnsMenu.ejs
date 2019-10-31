@@ -1,0 +1,22 @@
+<%
+  var siteUrl = "http://site.nicovideo.jp/nicocas/pc/index.html";
+  var ShareText = "ソードアート・オンライン";
+  var TwitterHashTag = "#sao #niconico";
+  var FacebookShareText = encodeURIComponent(ShareText);
+  var TwitterShareText = encodeURIComponent(ShareText + " " + TwitterHashTag);
+  var LineShareText = encodeURIComponent(ShareText);
+%>
+<section class="sw-SnsMenu">
+  <h1 class="sw-SnsMenu_Title">シェアする</h1>
+  <div class="sw-SnsMenu_List">
+    <a class="sw-SnsMenu_Anchor" href="http://twitter.com/share?url=<%= siteUrl %>&text=<%= TwitterShareText %>" target="_new">
+      <span class="sw-SnsMenu_Icon-twitter">ツイート</span>
+    </a>
+    <a class="sw-SnsMenu_Anchor" href="https://www.facebook.com/sharer/sharer.php?u=<%= siteUrl %>" target="_new">
+      <span class="sw-SnsMenu_Icon-facebook">Facebookでシェア</span>
+    </a>
+    <a class="sw-SnsMenu_Anchor" href="http://line.me/R/msg/text/?<%= LineShareText %> <%= siteUrl %>" target="_new">
+      <span class="sw-SnsMenu_Icon-line">LINEで送る</span>
+    </a>
+  </div>
+</section>

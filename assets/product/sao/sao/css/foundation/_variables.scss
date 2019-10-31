@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* Noto Sans JP */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+/* Font Family */
+$base-font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Meiryo", "メイリオ", sans-serif;
+
+// variables
+// $accent-color: #001842;
+
+// z-index
+$z-index:(
+  header,
+  footer
+);
+
+@function reverse($map) {
+  $result: ();
+  @for $i from 1 through length($map) {
+    $result: join((nth($map, $i)), $result, comma);
+  }
+  @return $result;
+}
+
+$z-index: reverse($z-index);

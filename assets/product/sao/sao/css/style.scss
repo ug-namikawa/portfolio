@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+@import "foundation/foundation";
+@import "sitewide/**/*";
+@import "structure/**/*";
+@import "pages/top/**/*";
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0 0%;
+  }
+  100% {
+    background-position: 0 1000px;
+  }
+}
+
+/*--------------------
+  .tp-Header
+ --------------------*/
+
+.tp-Header {
+  background-color: #041341;
+  background-image: url("../image/bg_deep_blue.png");
+  background-repeat: repeat;
+  background-position: left top;
+  background-size: 200px 200px;
+  animation-name: backgroundAnimation;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.tp-Header_Layout {
+  @include basic-layout;
+  position: relative;
+}
+
+.tp-Header_Title {
+  visibility: hidden;
+  position: absolute;
+}
+
+.tp-Header_Action {
+  display: flex;
+}
+
+.tp-Header_Play {
+  display: block;
+}
+
+.tp-Header_Image {
+  margin: 0;
+}
+
+.tp-Header_Picture {
+  display: block;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+
+/*--------------------
+  .tp-Section
+ --------------------*/
+
+
+.tp-Section {
+  background-color: #fff;
+  background-image: url("../image/line_deep_blue.png"),
+                    url("../image/line_deep_blue.png"),
+                    url("../image/bg_white.png");
+  background-repeat: repeat-x, repeat-x, repeat;
+  background-position: left top, right bottom, left top;
+  background-size: 800px 12px, 800px 12px, auto;
+}
+
+.tp-Section-dark {
+  @extend .tp-Section;
+  background-color: #001842;
+  background-image: url("../image/bg_deep_blue.png");
+  background-repeat: repeat;
+  background-position: left top;
+  background-size: 200px 200px;
+  animation-name: backgroundAnimation;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.tp-Section_Layout {
+  @include basic-layout;
+  position: relative;
+  padding: 32px 8px;
+}
+
+.tp-Section_Title {
+  margin: 0 0 16px 0;
+  width: 100%;
+}
+
+.tp-Section_TitlePicture {
+  display: block;
+  max-width: 228px;
+  margin: 0 auto;
+  vertical-align: bottom;
+}
+
+.tp-Section_Content {
+  display: flex;
+}
+
+.tp-Section_Content-single {
+  @extend .tp-Section_Content;
+  align-items: center;
+}
+
+.tp-Section_Cover {
+  margin: 0;
+  max-width: 300px;
+}
+
+.tp-Section_CoverPicture {
+  display: block;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.tp-Section_Music {
+  flex: 1 1 0%;
+  min-width: 216px;
+  margin: 0 0 0 8px;
+}
+
+.tp-Section_MusicItem {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: #102584;
+  border-radius: 4px;
+  border: 1px solid rgba(#001842, .3);
+  background-color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  & + & {
+    margin-top: 8px;
+  }
+  &::after {
+    content: "";
+    width: 28px;
+    height: 100%;
+    display: block;
+    background-image: url("../image/icon_play_deep_blue.svg");
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    .tp-Section-dark & {
+      background-image: url("../image/icon_play_white.svg");
+    }
+  }
+  .tp-Section-dark & {
+    background-color: #001842;
+    border-color: rgba(#fff, .3);
+    color: #fff;
+  }
+}
+
+.tp-Section_MusicIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 100%;
+  background-color: rgba(#001842, .1);
+  color: #001842;
+  font-size: 10px;
+  font-weight: bold;
+  .tp-Section-dark & {
+    background-color: rgba(#fff, .1);
+    color: #fff;
+  }
+}
+
+.tp-Section_MusicInformation {
+  flex: 1 1 0%;
+  min-width: 0%;
+  margin: 0 0 0 12px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.tp-Section_MusicTitle {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tp-Section_MusicSinger {
+  margin-top: 4px;
+  font-size: 10px;
+}
+
+.tp-Section_MusicPlayAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 12px;
+  margin-top: 16px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 23px;
+  background-color: #001842;
+  text-decoration: none;
+  cursor: pointer;
+  .tp-Section-dark & {
+    background-color: #fff;
+    color: #001842;
+  }
+}
+
+.tp-Section_MusicPlayAllIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin-left: 8px;
+  background-image: url("../image/icon_play_white.svg");
+  .tp-Section-dark & {
+    background-image: url("../image/icon_play_deep_blue.svg");
+  }
+}
+
+.tp-Section_MusicPlayAllText {
+  min-width: 0%;
+}
+
+.tp-Section_MusicPlayCaution {
+  font-size: 11px;
+  color: #102584;
+  text-align: center;
+  margin: 8px 0 0;
+}
+
+
+/*--------------------
+  .tp-Footer
+ --------------------*/
+
+.tp-Footer {
+  background-color: #fff;
+  background-image: url("../image/line_deep_blue.png"),
+                    url("../image/bg_white.png");
+  background-repeat: repeat-x, repeat;
+  background-size: 800px 12px, auto;
+  background-position: left top, left top;
+}
+
+.tp-Footer_Layout {
+  @include basic-layout;
+  position: relative;
+  padding: 32px 8px;
+}
+
+.tp-Footer_Banner {
+  display: block;
+}
+
+.tp-Footer_BannerPicture {
+  display: block;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.tp-Footer_PageTop {
+  margin: 32px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.tp-Footer_PageTopLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  text-decoration: none;
+  font-size: 12px;
+  color: #001842;
+  &::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    background-image: url(../image/icon_pagetop_anchor.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+}
+
+.tp-Footer_Copyright {
+  display: block;
+  margin: 32px 0 0;
+}
+
+.tp-Footer_CopyrightList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tp-Footer_CopyrightItem {
+  color: #001842;
+  font-size: 8px;
+  line-height: 1.4;
+  text-align: center;
+  & + & {
+    margin-top: 12px;
+  }
+}
