@@ -1,20 +1,249 @@
 <!DOCTYPE html>
-<html lang="ja">
+<% var meta = {
+  title: 'ソードアート・オンライン歴代OP&frasl;ED',
+  description: 'ソードアート・オンラインを聴こう'
+}; %>
+<html xml:lang="ja" lang="ja">
 <head>
-  <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-  <title>ページ一覧</title>
+  <%- include('./component/config/_head.ejs', meta) %>
 </head>
 <body>
-  <h1>ページ一覧</h1>
-  <ul>
-    <li>
-      <a href="sao/index.html">SAO特設</a>
-      <p>
-        ソードアートオンライン特設ページ
-      </p>
-    </li>
-  </ul>
+
+  <!-- ソードアート・オンライン ヘッダー -->
+  <header class="tp-Header" id="top">
+    <div class="tp-Header_Layout">
+      <h1 class="tp-Header_Title">ソードアート・オンライン歴代OP&frasl;ED</h1>
+      <img class="tp-Header_Picture" src="./image/kv_01.png" alt="ソードアート・オンライン メインビジュアル1">
+      <div class="tp-Header_Action">
+        <div class="tp-Header_Description">
+          <img class="tp-Header_Picture" src="./image/kv_description.png" alt="ソードアート・オンライン歴代OP&frasl;EDを聴こう">
+        </div>
+        <a class="tp-Header_Play" href="#" target="_blank">
+          <img class="tp-Header_Picture" src="./image/kv_play.png" alt="全曲連続再生">
+        </a>
+      </div>
+      <img class="tp-Header_Picture" src="./image/kv_02.png" alt="ソードアート・オンライン メインビジュアル2">
+    </div>
+  </header>
+
+  <main class="tp-Main">
+
+    <!-- ソードアート・オンライン アリシゼーション -->
+    <section class="tp-Section">
+      <div class="tp-Section_Layout">
+        <h1 class="tp-Section_Title">
+          <img class="tp-Section_TitlePicture" src="./image/logo_sao_alicization.png" alt="ソードアート・オンライン アリシゼーション">
+        </h1>
+        <div class="tp-Section_Content">
+          <figure class="tp-Section_Cover">
+            <img class="tp-Section_CoverPicture" src="./image/cover_sao_alicization.png" alt="ソードアート・オンライン アリシゼーション キービジュアル">
+          </figure>
+          <div class="tp-Section_Music">
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">OP1</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">crossing field</span>
+                <span class="tp-Section_MusicSinger">LiSA</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">ED2</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">Overfly</span>
+                <span class="tp-Section_MusicSinger">春奈るな</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">OP2</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">INNOCENCE</span>
+                <span class="tp-Section_MusicSinger">藍井エイル</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">ED1</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">ユメセカイ</span>
+                <span class="tp-Section_MusicSinger">戸松遥</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicPlayAll" href="#" target="_blank">
+              <span class="tp-Section_MusicPlayAllText">Nicoboxで連続再生</span>
+              <span class="tp-Section_MusicPlayAllIcon"></span>
+            </a>
+            <!-- <p class="tp-Section_MusicPlayCaution">
+              ※連続再生には、ログインが必要です
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ソードアート・オンライン オーディナル・スケール -->
+    <section class="tp-Section-dark animate">
+      <div class="tp-Section_Layout">
+        <div class="tp-Section_Content-single">
+          <figure class="tp-Section_Cover">
+            <img class="tp-Section_CoverPicture" src="./image/cover_sao_ordinal_scale.png" alt="ソードアート・オンライン オーディナル・スケール キービジュアル">
+          </figure>
+          <div class="tp-Section_Music">
+            <h1 class="tp-Section_Title">
+              <img class="tp-Section_TitlePicture" src="./image/logo_sao_ordinal_scale.png" alt="ソードアート・オンライン オーディナル・スケール">
+            </h1>
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">Catch the Moment</span>
+                <span class="tp-Section_MusicSinger">LiSA</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ソードアート・オンライン -->
+    <section class="tp-Section">
+      <div class="tp-Section_Layout">
+        <h1 class="tp-Section_Title">
+          <img class="tp-Section_TitlePicture" src="./image/logo_sao.png" alt="ソードアート・オンライン キービジュアル">
+        </h1>
+        <div class="tp-Section_Content">
+          <figure class="tp-Section_Cover">
+            <img class="tp-Section_CoverPicture" src="./image/cover_sao.png" alt="">
+          </figure>
+          <div class="tp-Section_Music">
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">OP1</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">crossing field</span>
+                <span class="tp-Section_MusicSinger">LiSA</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">ED2</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">Overfly</span>
+                <span class="tp-Section_MusicSinger">春奈るな</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">OP2</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">INNOCENCE</span>
+                <span class="tp-Section_MusicSinger">藍井エイル</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">ED1</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">ユメセカイ</span>
+                <span class="tp-Section_MusicSinger">戸松遥</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicPlayAll" href="#" target="_blank">
+              <span class="tp-Section_MusicPlayAllText">Nicoboxで連続再生</span>
+              <span class="tp-Section_MusicPlayAllIcon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ソードアート・オンラインⅡ -->
+    <section class="tp-Section-dark">
+      <div class="tp-Section_Layout">
+        <h1 class="tp-Section_Title">
+          <img class="tp-Section_TitlePicture" src="./image/logo_sao2.png" alt="ソードアート・オンラインⅡ">
+        </h1>
+        <div class="tp-Section_Content">
+          <figure class="tp-Section_Cover">
+              <img class="tp-Section_CoverPicture" src="./image/cover_sao2.png" alt="ソードアート・オンラインⅡ キービジュアル">
+          </figure>
+          <div class="tp-Section_Music">
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">OP1</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">IGNITE</span>
+                <span class="tp-Section_MusicSinger">藍井エイル</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">ED3</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">シルシ</span>
+                <span class="tp-Section_MusicSinger">LiSA</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">ED2</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">No More Time Machine</span>
+                <span class="tp-Section_MusicSinger">LiSA</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">OP2</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">courage</span>
+                <span class="tp-Section_MusicSinger">戸松遥</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicItem" href="#" target="_blank">
+              <span class="tp-Section_MusicIcon">ED2</span>
+              <div class="tp-Section_MusicInformation">
+                <span class="tp-Section_MusicTitle">Startear</span>
+                <span class="tp-Section_MusicSinger">春奈るな</span>
+              </div>
+            </a>
+            <a class="tp-Section_MusicPlayAll" href="#" target="_blank">
+              <span class="tp-Section_MusicPlayAllText">Nicoboxで連続再生</span>
+              <span class="tp-Section_MusicPlayAllIcon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ソードアート・オンライン フッター -->
+  <footer class="tp-Footer">
+    <div class="tp-Footer_Layout">
+      <a class="tp-Footer_Banner" href="#top">
+        <img class="tp-Footer_BannerPicture" src="./image/footer_banner.png" alt="ソードアート・オンライン Nアニメ コラボ企画開催中">
+      </a>
+      <div class="tp-Footer_PageTop">
+        <a class="tp-Footer_PageTopLink" href="#top">PAGE TOP</a>
+      </div>
+      <small class="tp-Footer_Copyright">
+        <ul class="tp-Footer_CopyrightList">
+          <li class="tp-Footer_CopyrightItem">
+            &copy; 2017 川原 礫／KADOKAWA<br>アスキー・メディアワークス／SAO-A Progect
+          </li>
+          <li class="tp-Footer_CopyrightItem">
+            &copy; 2016 川原 礫／KADOKAWA<br>アスキー・メディアワークス刊／SAO MOVIE Progect
+          </li>
+          <li class="tp-Footer_CopyrightItem">
+            &copy; 2014 川原 礫／KADOKAWA<br>アスキー・メディアワークス刊／SAOⅡ Progect
+          </li>
+          <li class="tp-Footer_CopyrightItem">
+            &copy; 川原 礫／<br>アスキー・メディアワークス／SAO Progect
+          </li>
+        </ul>
+      </small>
+    </div>
+  </footer>
+
+  <script src="js/smooth-scroll.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 300
+    });
+  </script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    window.sr = ScrollReveal();
+    sr.reveal('.tp-Section, .tp-Section-dark', {origin: 'bottom', easing: 'ease-out', duration: 600, distance: '0px', opacity: 0, reset: true, scale: 1, viewFactor: 0.2 });
+  </script>
 </body>
 </html>
