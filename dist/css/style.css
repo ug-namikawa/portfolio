@@ -647,20 +647,22 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: #fafafa;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 56px;
-  padding: 0;
+  height: 80px;
+  padding: 0 40px;
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border-bottom: 1px solid #e6e6e6; }
 
 .st-Header_Title {
@@ -671,11 +673,6 @@ body {
 
 .st-Header_Logo {
   display: block;
-  position: absolute;
-  left: 40px;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
   width: 30px;
   height: 30px;
   -webkit-box-sizing: border-box;
@@ -688,6 +685,11 @@ body {
   background-color: #252525; }
   .st-Header_Logo:hover {
     background-color: rgba(37, 37, 37, 0.9); }
+
+.st-Header_Description {
+  font-size: 14px;
+  color: #252525;
+  margin-left: 8px; }
 
 /*-----------------
   Layout

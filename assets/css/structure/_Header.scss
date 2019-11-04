@@ -7,14 +7,15 @@
 .st-Header {
   position: sticky;
   top: 0;
-  background-color: #fafafa;
+  background-color: #fff;
   display: flex;
-  height: 56px;
-  padding: 0;
+  height: 80px;
+  padding: 0 40px;
   margin: 0;
+  box-sizing: border-box;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border-bottom: 1px solid $mono-color5;
   // background-color: #fff;
   // background-color: #efeff0;
@@ -29,10 +30,10 @@
 
 .st-Header_Logo {
   display: block;
-  position: absolute;
-  left: 40px;
-  top: 50%;
-  transform: translate(0, -50%);
+  // position: absolute;
+  // left: 40px;
+  // top: 50%;
+  // transform: translate(0, -50%);
   width: 30px;
   height: 30px;
   box-sizing: border-box;
@@ -46,4 +47,10 @@
   &:hover {
     background-color: rgba($mono-color1, .9);
   }
+}
+
+.st-Header_Description {
+  font-size: 14px;
+  color: #252525;
+  margin-left: 8px;
 }
