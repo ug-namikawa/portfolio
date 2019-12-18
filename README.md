@@ -5,8 +5,6 @@ https://ug-namikawa.github.io/portfolio/public/
 
 ## 使用方法
 
-### 各自のリポジトリを作成する
-
 1. リポジトリをForkする
 
 2. Forkしたリポジトリをローカルにダウンロードする
