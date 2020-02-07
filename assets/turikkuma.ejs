@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<% var meta = {
+  title: 'portforio',
+  description: 'tsurikkuma'
+}; %>
+<html xml:lang="ja" lang="ja">
+<head>
+  <%- include('./component/config/_head', meta) %>
+</head>
+<body>
+  <!-- Header -->
+  <%- include('./component/structure/_Header', meta) %>
+  <main class="st-Main">
+    <div class="pr-Layout_Main">
+      <%- include('./component/pages/product/tsurikkuma/_Heading') %>
+      <%- include('./component/pages/product/tsurikkuma/_Contents') %>
+      <%- include('./component/pages/product/tsurikkuma/_Display') %>
+    </div>
+  </main>
+  <!-- Footer -->
+  <%- include('./component/structure/_Footer', meta) %>
+</body>
+</html>
