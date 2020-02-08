@@ -28,6 +28,20 @@
   display: none;
 }
 
+.st-Header_Link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  &:hover {
+    .st-Header_Logo {
+      background-color: rgba($mono-color1, .9);
+    }
+    .st-Header_Description {
+      color: rgba($mono-color1, .9);
+    }
+  }
+}
+
 .st-Header_Logo {
   display: block;
   // position: absolute;

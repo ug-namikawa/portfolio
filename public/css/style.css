@@ -671,6 +671,19 @@ body {
   margin: 0 100px;
   display: none; }
 
+.st-Header_Link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none; }
+  .st-Header_Link:hover .st-Header_Logo {
+    background-color: rgba(37, 37, 37, 0.9); }
+  .st-Header_Link:hover .st-Header_Description {
+    color: rgba(37, 37, 37, 0.9); }
+
 .st-Header_Logo {
   display: block;
   width: 30px;
