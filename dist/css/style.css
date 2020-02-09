@@ -1220,8 +1220,9 @@ body {
       text-align: center; } }
 
 .tp-Product_Description {
-  font-size: 15px;
-  line-height: 1.4; }
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333; }
 
 .tp-Product_Picture {
   margin: 0;
