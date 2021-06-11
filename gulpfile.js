@@ -1,40 +1,25 @@
-var gulp = require('gulp');
-var plumber = require('gulp-plumber');
-var sass = require('gulp-sass');
-var sassGlob = require('gulp-sass-glob');
-var autoprefixer = require('gulp-autoprefixer');
-var del = require("del");
-var browserSync = require('browser-sync');
-var runSequence = require('run-sequence');
-var babel = require("gulp-babel");
-var ejs = require('gulp-ejs');
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
+const autoprefixer = require('gulp-autoprefixer');
+const del = require("del");
+const browserSync = require('browser-sync');
+const babel = require("gulp-babel");
+const ejs = require('gulp-ejs');
 
-gulp.task('default', () => {
+gulp.task('default', (done) => {
   console.log('complete');
+  done();
 });
 
 gulp.task('clean', (callback) => {
-  return del(['dist'], callback);
-});
-
-gulp.task('build', ['clean'], (callback) => {
-  return runSequence(
-    ['html', 'image', 'scss', 'babel', 'ejs'],
-    callback
-  );
-});
-
-gulp.task('release', (cb) => {
-  return runSequence(
-    'build',
-    'publicClean',
-    'publicCopy',
-    cb
-  );
+  return del(['./dist'], callback);
 });
 
 gulp.task('publicClean', () => {
-  return del(['public']);
+  return del(['./public']);
 });
 
 gulp.task('publicCopy', () => {
@@ -55,7 +40,8 @@ gulp.task('ejs', () => {
         this.emit('end');
       }
     }))
-    .pipe(ejs({ msg: ''}, {}, { ext: '.html' }))
+    .pipe(ejs())
+    .pipe(rename({extname:'.html'})) 
     .pipe(gulp.dest('./dist'));
 })
 
@@ -64,17 +50,23 @@ gulp.task('image', () => {
     .pipe(gulp.dest('./dist'))
 });
 
-gulp.task('babel', () => {
+// gulp.task('babel', () => {
+//   return gulp.src('./assets/**/*.js')
+//     .pipe(plumber({
+//       errorHandler: function(err) {
+//         console.log(err.messageFormatted);
+//         this.emit('end');
+//       }
+//     }))
+//     .pipe(babel({
+//       presets: ['es2015']
+//     }))
+//     .pipe(gulp.dest('./dist'))
+// })
+
+// babelを動かすとjsが消えてしまう？ので一時的に止めてjsをそのままにしておく
+gulp.task('js', () => {
   return gulp.src('./assets/**/*.js')
-    .pipe(plumber({
-      errorHandler: function(err) {
-        console.log(err.messageFormatted);
-        this.emit('end');
-      }
-    }))
-    .pipe(babel({
-      presets: ['es2015']
-    }))
     .pipe(gulp.dest('./dist'))
 })
 
@@ -87,16 +79,33 @@ gulp.task('scss', () => {
       }
     }))
     .pipe(sassGlob())
-    .pipe(sass())
+    .pipe(sass({
+      outputStyle: 'expanded'// Minifyするなら'compressed'
+    }))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'ie 11', 'android 4'],
-      remove: false
+      remove: false,
+      grid: 'autoplace', //gridレイアウトのプレフィックスを有効にする
     }))
     .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('build', gulp.parallel('html', 'image', 'scss', 'js', 'ejs', (callback) => {
+  console.log('finish')
+  callback();
+}));
+
+gulp.task('cleanBuild', gulp.series('clean', 'build'));
+
+gulp.task('release',
+  gulp.series(
+    'build',
+    'publicClean',
+    'publicCopy',
+  )
+);
+
 gulp.task('browser-sync', () => {
-  return browserSync({
+  return browserSync.init({
     server: {
       baseDir: './dist/'
     },
@@ -105,13 +114,26 @@ gulp.task('browser-sync', () => {
   });
 });
 
-gulp.task('watch', ['build', 'browser-sync'], () => {
-  gulp.watch('assets/**/*.scss', ['scss']);
-  gulp.watch('assets/**/*.+(jpg|png|gif|svg|ico)', ['image']);
-  gulp.watch('assets/**/*.html', ['html']);
-  gulp.watch('assets/**/*.ejs', ['ejs']);
-  gulp.watch('assets/**/*.js', ['babel']);
-  gulp.watch(['dist/**/*.html', 'dist/**/*.css', 'dist/**/*.js', 'dist/**/*.+(jpg|png|gif|svg|ico)'], () => {
-    browserSync.reload();
-  });
+gulp.task('bs-reload', (done) => {
+  browserSync.reload();
+  done();
 });
+
+gulp.task('watch', (done) => {
+  gulp.watch('assets/**/*.scss', gulp.series('scss', 'bs-reload'));
+  gulp.watch('assets/**/*.+(jpg|png|gif|svg|ico)', gulp.series('image', 'bs-reload'));
+  gulp.watch('assets/**/*.html', gulp.series('html', 'bs-reload'));
+  gulp.watch('assets/**/*.ejs', gulp.series('ejs', 'bs-reload'));
+  gulp.watch('assets/**/*.js', gulp.series('js', 'bs-reload'));
+  done();
+});
+
+gulp.task('start',
+  gulp.series(
+    'cleanBuild',
+    gulp.parallel(
+      'browser-sync',
+      'watch',
+    )
+  )
+);
