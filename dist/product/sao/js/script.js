@@ -1,3 +1,2 @@
-"use strict";
-
-(function (global) {})(window);
+(function (global) {
+})(window);

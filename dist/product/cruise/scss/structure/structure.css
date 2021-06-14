@@ -7,51 +7,62 @@ st-Header
 .st-Header {
   min-width: 1072px;
   background-color: #252525;
-  color: #fff; }
-  @media screen and (max-width: 480px) {
-    .st-Header {
-      min-width: auto; } }
+  color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  .st-Header {
+    min-width: auto;
+  }
+}
 
 .st-Header_Title {
-  display: none; }
+  display: none;
+}
 
 .st-Header_ServiceList {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 1024px;
   height: 48px;
   margin: 0 auto;
   padding: 0 24px;
-  list-style: none; }
-  @media screen and (max-width: 480px) {
-    .st-Header_ServiceList {
-      width: 100%;
-      padding: 0; } }
+  list-style: none;
+}
+
+@media screen and (max-width: 480px) {
+  .st-Header_ServiceList {
+    width: 100%;
+    padding: 0;
+  }
+}
 
 .st-Header_ServiceItem {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  margin: 10px 0; }
-  .st-Header_ServiceItem + .st-Header_ServiceItem {
-    margin-left: 8px; }
+  margin: 10px 0;
+}
+
+.st-Header_ServiceItem + .st-Header_ServiceItem {
+  margin-left: 8px;
+}
 
 .st-Header_ServiceLink {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
           align-items: center;
   padding: 8px 10px;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Meiryo", "メイリオ", sans-serif;
   font-size: 12px;
   color: #fff;
   text-decoration: none;
-  border-radius: 20px; }
-  .st-Header_ServiceLink:hover {
-    background-color: #525252; }
+  border-radius: 20px;
+}
+
+.st-Header_ServiceLink:hover {
+  background-color: #525252;
+}
 
 .st-Header_ServiceIcon-niconico {
   display: block;
@@ -63,31 +74,34 @@ st-Header
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 73 76' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 23.65v37.89a6.36 6.36 0 0 0 6.39 6.32h7.53l4.12 6.61a1.51 1.51 0 0 0 1.34.72 1.53 1.53 0 0 0 1.31-.72l4.12-6.61h22.11l4.12 6.61a1.51 1.51 0 0 0 1.34.72 1.53 1.53 0 0 0 1.31-.72l4.13-6.61h8.36a6.35 6.35 0 0 0 6.39-6.32V23.65a6.35 6.35 0 0 0-6.39-6.32H41.99L56.05 3.44 52.56-.03 36.23 16.11 19.92.06l-3.5 3.45 14 13.82h-24A6.36 6.36 0 0 0 0 23.65z' fill='%23fff'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center center; }
+  background-position: center center;
+}
 
 /*--------------------
 st-Footer
 --------------------*/
 .st-Footer {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
           align-items: center;
   min-width: 1072px;
   height: 100px;
   padding: 0;
   margin: 0;
-  background-color: #252525; }
-  @media screen and (max-width: 480px) {
-    .st-Footer {
-      min-width: auto; } }
+  background-color: #252525;
+}
+
+@media screen and (max-width: 480px) {
+  .st-Footer {
+    min-width: auto;
+  }
+}
 
 .st-Footer_Copyright {
   color: #fff;
   font-size: 12px;
-  font-weight: normal; }
+  font-weight: normal;
+}
